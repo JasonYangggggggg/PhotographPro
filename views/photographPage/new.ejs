@@ -1,0 +1,36 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploading new photo</title> -->
+    <% layout('layout/boilerplate') %>
+</head>
+
+    <h1>Uploding photo for now!</h1>
+    <form action="/photographs" method="post">
+        <label for="City">Location</label>
+     <input type="text" name="Location" id="City" placeholder="Location">
+     <label for="description">Description</label>
+     <input type="text" name="description" id="description" placeholder="description">
+     <label for="author">Author</label>
+     <input type="text" name="author" id="author" placeholder="author">
+     <label for="image">Image URL</label>
+     <input type="text" name="image" id="image">
+     <label for="category">Category</label>
+     <select name="category" id="category">
+        <option value="technology">technology</option>
+        <option value="vision">vision</option>
+        <option value="universe">universe</option>
+       
+     </select>
+     <button>Upload!</button>
+
+    </form>
+    <form action="/photographs">
+        <button>Cancel</button>
+    </form>
+    
+<!-- </body>
+</html> -->

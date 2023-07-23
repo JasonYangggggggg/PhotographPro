@@ -1,0 +1,27 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    There is a extension downstair
+    <title> photographs.Location  </title> -->
+    <% layout('layout/boilerplate') %>
+</head>
+
+    <h1><%= photographs.Location %> </h1>
+    <ul>
+        <li>Author: <%= photographs.author %> </li>
+        <li>Category: <%= photographs.category %></li>
+        <li>Description: <%= photographs.description %> </li>
+        
+    </ul>
+    <img class="w-50 p-3" src="<%= photographs.image %> " alt="">
+    <form action="/photographs/<%= photographs._id %>/edit">
+    <button class="btn btn-outline-warning">Edit</button>
+    </form>
+    <form action="/photographs/<%= photographs._id %>?_method=DELETE" method="post">
+      <button class="btn btn-danger">Delete the photo!</button>
+    </form>
+<!-- </body>
+</html> -->

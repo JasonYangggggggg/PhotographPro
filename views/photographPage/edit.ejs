@@ -1,0 +1,34 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit your photos!</title>
+</head> -->
+<% layout('layout/boilerplate') %>
+
+    <h1>Edit your photos!</h1>
+    <form action="/photographs/<%= photographs._id %>?_method=PUT " method="post">
+        <label for="City">Location</label>
+     <input type="text" name="Location" id="City" placeholder="Location" value="<%= photographs.Location %> ">
+     <label for="description">Description</label>
+     <input type="text" name="description" id="description" placeholder="description" value="<%= photographs.description %> ">
+     <label for="author">Author</label>
+     <input type="text" name="author" id="author" placeholder="author" value="<%= photographs.author %>">
+     <label for="image">Image URL</label>
+     <input type="text" name="image" id="image" value="<%= photographs.image %>">
+     <label for="category">Category</label>
+     <select name="category" id="category">
+        <option value="technology"<%= photographs.category === 'technology'?'selected':'' %> >technology</option>
+        <option value="vision" <%= photographs.category === 'vision'?'selected':'' %>>vision</option>
+        <option value="universe" <%= photographs.category === 'universe'?'selected':'' %>>universe</option>
+     </select>
+     <button class="btn btn-info">Done</button>
+
+    </form>
+    <form action="/photographs/<%= photographs._id %> ">
+     <button class="btn btn-warning">Go back to your photo!</button>
+    </form>
+<!-- </body>
+</html> -->

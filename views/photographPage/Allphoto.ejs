@@ -1,0 +1,25 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front Page</title>
+</head> -->
+<% layout('layout/boilerplate') %> 
+<h1>Welcome</h1>
+    <!-- <ul> -->
+        <div class="container">
+        
+        <div class="row">
+        <% for(let photos of photographs ){ %> 
+            <div class="col-lg-4 col-md-6">
+            <a href="/photographs/<%= photos._id %>"><img class="img-fluid shadow-lg p-3 mb-5 bg-body rounded" src="<%= photos.image %> " alt=""></a>
+           </div>
+            <% } %> 
+           </div>
+            </div>
+    <!-- </ul> -->
+    <!-- <a href="/photographs/new">Uploading new photo!</a> -->
+<!-- </body>
+</html> -->
